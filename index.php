@@ -1,10 +1,14 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Lottery</title>
-</head>
-<body>
-    <h1>Welcome in Lottery</h1>
-</body>
-</html>
+<?php
+/**
+ * Created by PhpStorm.
+ * User: manko
+ * Date: 15.09.2018
+ * Time: 15:27
+ */
+
+//require_once 'object/Lottery.php';
+namespace lottery;
+require_once __DIR__ . '/object/Lottery.php';
+
+$lottery = new Lottery();
+$lottery->run();
