@@ -8,13 +8,26 @@
 
 namespace Lottery;
 
-use lottery\Authentication;
 
 class Lottery
 {
 
+    public function __construct()
+    {
+
+    }
+
     public function run()
     {
-        require_once './view/index.php';
+        if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) || !empty($_SERVER['HTTP_X_REQUESTED_WITH']) ||
+            (strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest')){
+
+            $this->startLottery();
+        }
+    }
+
+    private function startLottery()
+    {
+        echo "startLottery";
     }
 }

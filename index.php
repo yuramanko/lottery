@@ -6,8 +6,18 @@
  * Time: 15:27
  */
 
-namespace lottery;
-require_once __DIR__ . '/object/Lottery.php';
+require_once __DIR__ . '/config.php';
 
-$lottery = new Lottery();
-$lottery->run();
+use Authentication\Authentication;
+use Lottery\Lottery;
+
+$auth = new Authentication();
+
+if ($auth->checkAuthentication()){
+    require_once "./view/index.php";
+    $lottery = new Lottery();
+    $lottery->run();
+}
+else
+    require_once "./view/login.php";
+

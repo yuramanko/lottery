@@ -6,6 +6,10 @@
 </head>
 <body>
 <h1>Welcome in Lottery</h1>
+
 <h2>Home Page</h2>
+
+<input type="button" value="Получить приз" />
+
 </body>
 </html>
